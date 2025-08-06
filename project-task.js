@@ -39,17 +39,15 @@ console.log("Welcome, Bob!");
 console.log("Welcome, Charlie!");
 
 //Refactoring Script 1 -  Greeting multiple users
-////Not using return since code has to display the output instead of giving back the value to use later in the code
+//Using Return
 
 function greet(name)
 {
 return("Welcome, " + name + "!");
 }
-let greetNames = ["Alice", "Bob", "Charlie"]
-for (let name of greetNames) {
-
-   console.log(greet(name));
-}
+console.log(greet("Alice"));
+console.log(greet("Bob"));
+console.log(greet("Charlie"));
 
 
 // Script 2 - Sum calculation
