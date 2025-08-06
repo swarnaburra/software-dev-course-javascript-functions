@@ -43,11 +43,13 @@ console.log("Welcome, Charlie!");
 
 function greet(name)
 {
-console.log("Welcome, " + name + "!");
+return("Welcome, " + name + "!");
 }
-greet("Alice");
-greet("Bob");
-greet("Charlie");
+let greetNames = ["Alice", "Bob", "Charlie"]
+for (let name of greetNames) {
+
+   console.log(greet(name));
+}
 
 
 // Script 2 - Sum calculation
@@ -57,15 +59,18 @@ let sum = num1 + num2;
 console.log("The sum of 5 and 10 is " + sum);
 
 // Refactoring - Script 2 - Sum calculation
-////Not using return since code has to display the output instead of giving back the value to use later in the code
+//Sum calculation - Using return
 
-function sumOfNumbers(num1, num2) //created a function named sumOfNumbers with two placeholders num1 and num2
+function addNumbers( x, y)
+
 {
-   let sum = num1 + num2; // sum is the new variable in which two added number is stored
-   console.log("The sum of " + num1 + " and " + num2 + " is " + sum ); // printing the message
- 
+return x + y;
+
+
 }
-sumOfNumbers(5,10); //calls the function sumOfNumbers and gives two arguments- the actual inputs which fill in the placeholders
+let number1 = 5;
+let number2 = 10;
+console.log("The sum of " + number1 + " and " + number2 + " is " + addNumbers(number1 , number2));
 
 
 // Script 3 - Product calculation
@@ -74,15 +79,17 @@ let product = num1 * num2;
 console.log("The product of 5 and 10 is " + product);
 
 //Refactoring - // Script 3 - Product calculation
-////Not using return since code has to display the output instead of giving back the value to use later in the code
-
-function multiPlicaiton(num1, num2)
+// Using return 
+   
+function multiply(a, b)
 {
-let product = num1 * num2;
-console.log("The product of " + num1 + " and " + num2 + " is " + product);
-}
-multiPlicaiton(5,10);
+return a * b;
 
+}
+
+let value1 = 5;
+let value2 = 10;
+console.log("The product of " + value1 + " and " + value2 + " is " + multiply( value1, value2));
 
 
 
@@ -95,21 +102,14 @@ for (let i = 0; i < names.length; i++) {
 }
 
 // Refactoring - Script 4 - Print names from a list
+//Using return
 
-//Not using return since code has to display the output instead of giving back the value to use later in the code
-
-function listNames(name1, name2, name3)
+function allNames(names)
 {
-let names = [name1, name2, name3];
-
-for (let i=0; i < names.length; i++) 
-
-{
-console.log("Names in the list: " + names[i]);
-}
+return "Names in the list: " + "\n" + names.join("\n");
 
 }
-listNames("Alice", "Bob", "Charlie");
+console.log(allNames(["Alice", "Bob", "Charlie"]));
 
 
 
